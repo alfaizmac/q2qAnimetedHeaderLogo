@@ -322,7 +322,24 @@
     const technologies = document.querySelectorAll('.technologies');
     const q2q = document.querySelectorAll('.q2q');
 
-    btn.addEventListener('click', () => {
+    // btn.addEventListener('click', () => {
+    //   root.style.setProperty('--shared-anchor-x','320px');
+
+    //   if (q2qbgleft) q2qbgleft.style.transform = 'scaleX(1) translateX(310px)';
+    //   if (q2qbgcenter) q2qbgcenter.style.transform = 'scaleX(1) translateX(310px)';
+
+    //   q2q.forEach(el => {
+    //     el.style.transition = 'fill 1s ease-in-out';
+    //     el.style.fill = '#660361';
+    //   });
+
+    //   setTimeout(() => {
+    //     technologies.forEach(el => el.classList.add('show'));
+    //   }, 600);
+    // });
+
+    function triggerAnimation() {
+    
       root.style.setProperty('--shared-anchor-x','320px');
 
       if (q2qbgleft) q2qbgleft.style.transform = 'scaleX(1) translateX(310px)';
@@ -336,8 +353,16 @@
       setTimeout(() => {
         technologies.forEach(el => el.classList.add('show'));
       }, 600);
-    });
+    }
+
+    window.onload = function() {
+        setTimeout(() => {
+            triggerAnimation();
+    }, 500);
+    };
+
   });
+
 </script>
     
 </body>
