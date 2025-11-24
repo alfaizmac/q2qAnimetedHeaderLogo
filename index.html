@@ -8,25 +8,20 @@
     :root {
         --shared-anchor-x: -2800px; 
         --coordinate-snap: 2511px;
+
         --vertex-offset: 140px; 
         --stagesync-offset: 505px;
         --crescitcloud-offset: 405px;
         --profileservice-offset: 600px;
     }
 
-
-    
     .logo-btns {
         position: absolute; /* keeps them stacked */
-        top: 10px;
-        left: 0;
-        background-color: none;
         border: none;
         padding: 0;
         cursor: pointer;
         width: 100%;
         height: auto;
-        z-index: 999;
     }
 
     .bg-path {
@@ -44,17 +39,14 @@
 
     .q2q-bg-left {
         transform: scaleX(1) translateX(-900px);
-        transform-origin: left;
     }
 
     .q2q-bg-right {
         transform: translateX(var(--shared-anchor-x)); 
-        transform-origin: left;
     }
 
     .q2q-bg-center {
         transform: scaleX(0.25) translateX(650px); /* Slight adjustment to connect */
-        transform-origin: left;
     }
 
     .q2q{
@@ -79,94 +71,54 @@
         transform: translateX(calc(var(--coordinate-snap) + var(--shared-anchor-x) + var(--vertex-offset)));
     }
 
-    .vertex-left-bg{
-        display: none;
-    }
-
-    .vertex-center-bg{
-        display: none;
-    }
-
-    .vertex{
-        display: none   ;
-    }
-
-    .labs{
-        display: none;
-    }
-
     .stagesync-anchor-group{
         transform: translateX(calc(var(--coordinate-snap) + var(--shared-anchor-x) + var(--stagesync-offset)));
-    }
-
-    .stagesync-bg-left{
-        display: none;
-    }
-
-    .stagesync-bg-center{
-        display: none;
-    }
-
-    .stage{
-        display: none;
-    }
-
-    .sync{
-        display: none;
     }
 
     .crescitcloud-anchor-group{
         transform: translateX(calc(var(--coordinate-snap) + var(--shared-anchor-x) + var(--crescitcloud-offset)));
     }
 
-    .crescit-bg-left{
-        display: none;
-    }
-
-    .crescit-bg-center{
-        display: none;
-    }
-
-    .crescit{
-        display: none;
-    }
-
-    .cloud{
-        display: none;
-    }
-
     .profileservice-anchor-group{
         transform: translateX(calc(var(--coordinate-snap) + var(--shared-anchor-x) + var(--profileservice-offset)));
     }
 
-    .profileservice-bg-left{
-        display: none;
+    .hover-trigger-button {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        min-width: 900px;
+        width: 100%;
+        height: auto;
     }
 
-    .profileservice-bg-center{
-        display: none;
+    .q2qtechnologies{
+        position: static;
+        z-index: 10;
     }
 
-    .profile{
+    .q2qtechnologies, .logo-btns svg {
+        align-items: start;
+        justify-content: start;
+    width: 100%;
+    height: 37px;
+    }
+        .profileservice-bg-left, .profileservice-bg-center, .profile, .service, .vertex-left-bg, .vertex-center-bg, .vertex, .labs, .stagesync-bg-left, .stagesync-bg-center, .stage, .sync, .crescit-bg-left, .crescit-bg-center, .crescit, .cloud {
         display: none;
     }
-
-    .service{
-        display: none;
-    }
-
     </style>
 
-
-
+<div class="hover-trigger-button">
 
 <div class="profileservice logo-btns">
-    <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 5410 550" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="11000 0 5410 550" fill="none">
         <g class="bg-path profileservice-anchor-group">
 <path class="profileservice-bg-left" d="M454.311 0.199966H339.712C329.353 0.199966 290.505 -5.8476 259.428 48.5727C228.352 102.993 22.894 448.516 12.5355 465.794C2.17701 483.072 -14.2252 525.397 27.2106 525.397H454.527L454.311 0.199966Z" fill="#175873"/>
 <path class="profileservice-bg-right" d="M1381.83 525.197L1496.43 525.197C1506.79 525.197 1545.63 531.244 1576.71 476.824C1607.79 422.404 1813.25 76.8805 1823.6 59.6028C1833.96 42.3252 1850.36 0.000123353 1808.93 0.00011973L1381.61 8.23732e-05L1381.83 525.197Z" fill="#175873"/>
 <rect class="profileservice-bg-center" x="370.114" width="1116.29" height="525.397" fill="#175873"/>
-
 
 <path class="profile" d="M397.767 422.38C377.973 422.38 360.654 418.013 345.809 409.281C330.964 400.549 319.321 387.305 310.88 369.549C302.73 351.502 298.655 328.798 298.655 301.436C298.655 273.784 302.584 251.08 310.443 233.324C318.302 215.568 329.654 202.324 344.499 193.592C359.344 184.86 377.1 180.493 397.767 180.493C419.889 180.493 439.682 185.587 457.147 195.775C474.903 205.672 488.874 219.643 499.062 237.69C509.541 255.737 514.78 276.986 514.78 301.436C514.78 326.178 509.541 347.572 499.062 365.619C488.874 383.666 474.903 397.638 457.147 407.535C439.682 417.431 419.889 422.38 397.767 422.38ZM258.922 503.59V183.986H323.978V232.014L322.669 301.873L327.035 371.295V503.59H258.922ZM385.978 366.492C397.33 366.492 407.372 363.873 416.105 358.633C425.128 353.394 432.26 345.971 437.499 336.366C443.029 326.469 445.795 314.826 445.795 301.436C445.795 287.756 443.029 276.113 437.499 266.507C432.26 256.901 425.128 249.479 416.105 244.24C407.372 239 397.33 236.38 385.978 236.38C374.626 236.38 364.438 239 355.415 244.24C346.391 249.479 339.26 256.901 334.021 266.507C328.781 276.113 326.161 287.756 326.161 301.436C326.161 314.826 328.781 326.469 334.021 336.366C339.26 345.971 346.391 353.394 355.415 358.633C364.438 363.873 374.626 366.492 385.978 366.492Z" fill="white"/>
 <path class="profile" d="M535.447 418.886V183.986H600.503V250.352L591.334 231.141C598.32 214.549 609.526 202.033 624.954 193.592C640.381 184.859 659.155 180.493 681.277 180.493V243.366C678.367 243.075 675.747 242.93 673.418 242.93C671.09 242.638 668.615 242.493 665.996 242.493C647.367 242.493 632.231 247.878 620.587 258.648C609.235 269.127 603.559 285.573 603.559 307.986V418.886H535.447Z" fill="white"/>
@@ -194,7 +146,7 @@
 
 
     <div class="crescitcloud logo-btns">
-<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 5410 550" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="11000 0 5410 550" fill="none">
     <g class="bg-path crescitcloud-anchor-group">
 <path class="crescit-bg-left" d="M454.038 0.199966H339.439C329.08 0.199966 290.232 -5.8476 259.155 48.5727C228.079 102.993 22.6212 448.516 12.2627 465.794C1.90417 483.072 -14.498 525.397 26.9379 525.397H454.254L454.038 0.199966Z" fill="#FFB718"/>
 <path class="crecsit-bg-right" d="M1444.14 525.197H1558.74C1569.09 525.197 1607.94 531.244 1639.02 476.824C1670.1 422.404 1875.55 76.8804 1885.91 59.6027C1896.27 42.3251 1912.67 -3.623e-06 1871.24 0L1443.92 3.73568e-05L1444.14 525.197Z" fill="#FFB718"/>
@@ -224,7 +176,7 @@
 
 
 <div class="stagesync logo-btns">
-<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 5410 550" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="11000 0 5410 550" fill="none">
     <g class="bg-path stagesync-anchor-group">
 <path class="stagesync-bg-left" d="M454.417 0.20021H339.818C329.459 0.20021 290.611 -5.84735 259.534 48.5729C228.458 102.993 23.0003 448.516 12.6418 465.794C2.28334 483.072 -14.1189 525.397 27.317 525.397H454.633L454.417 0.20021Z" fill="#E47C85"/>
 <path class="stagesync-bg-right" d="M1213.11 525.197L1327.71 525.197C1338.07 525.197 1376.92 531.244 1407.99 476.824C1439.07 422.404 1644.53 76.8803 1654.88 59.6026C1665.24 42.325 1681.65 -0.000123353 1640.21 -0.00011973L1212.89 -8.23732e-05L1213.11 525.197Z" fill="#E47C85"/>
@@ -249,7 +201,7 @@
 
 
 <div class="vertexlabs logo-btns">
- <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 5410 550" fill="none">
+ <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="11000 0 5410 550" fill="none">
 
     <g class="bg-path vertex-anchor-group">
 <path class="vertex-left-bg" d="M453.995 0.199966H339.396C329.037 0.199966 290.189 -5.8476 259.112 48.5727C228.036 102.993 22.5783 448.516 12.2198 465.794C1.86133 483.072 -14.5409 525.397 26.895 525.397H454.211L453.995 0.199966Z" fill="#A24581"/>
@@ -275,8 +227,8 @@
 
 
 
-<div id="moveAnimation" class="logo-btns">
-<svg class="q2qtechnologies" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 5410 550" fill="none">
+<div class="q2qtechnologies">
+<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="11000 0 5410 550" fill="none">
     <!-- background-svg -->
 <path class="bg-path1 q2q-bg-left" d="M1424 0.999657L1309 0.999895C1299 1.49931 1260.01 -4.85465 1228.94 49.628C1197.87 104.111 992.445 450.03 982.088 467.328C971.732 484.625 955.333 527 996.761 527H1424V0.999657Z" fill="#660361"/>
 <path class="bg-path q2q-bg-right" d="M3955 526.907L4069.85 526.8C4080 525.998 4119 532.855 4150.06 478.372C4181.14 423.89 4386.56 77.9688 4396.92 60.6713C4407.26 43.3738 4423.67 1.00004 4382.24 1.00004L3955 1V526.907Z" fill="#660361"/>
@@ -305,12 +257,12 @@
 </svg>
 </div>
 
-
+</div>
 
 <script>
   // defensive: wait for DOM, check element exists
   document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.querySelector('.q2qtechnologies');
+    const btn = document.querySelector('.hover-trigger-button');
     if (!btn) {
       console.error('q2qtechnologies element not found');
       return;
@@ -321,22 +273,40 @@
     const q2qbgcenter = document.querySelector('.q2q-bg-center');
     const technologies = document.querySelectorAll('.technologies');
     const q2q = document.querySelectorAll('.q2q');
+    const logorow = document.querySelector('.logo-row');    
 
-    // btn.addEventListener('click', () => {
-    //   root.style.setProperty('--shared-anchor-x','320px');
+    const q2qtechnologies = document.querySelector('.q2qtechnologies');
 
-    //   if (q2qbgleft) q2qbgleft.style.transform = 'scaleX(1) translateX(310px)';
-    //   if (q2qbgcenter) q2qbgcenter.style.transform = 'scaleX(1) translateX(310px)';
 
-    //   q2q.forEach(el => {
-    //     el.style.transition = 'fill 1s ease-in-out';
-    //     el.style.fill = '#660361';
-    //   });
+    const profileservice = document.querySelector('.profileservice');
+    const profileserviceBGleft = document.querySelector('.profileservice-bg-left');
+    const profileserviceBGcenter = document.querySelector('.profileservice-bg-center');
+    const profile= document.querySelectorAll('.profile');
+    const service = document.querySelectorAll('.service');
 
-    //   setTimeout(() => {
-    //     technologies.forEach(el => el.classList.add('show'));
-    //   }, 600);
-    // });
+
+    
+
+    btn.addEventListener('mouseenter', () => {
+
+        profileserviceBGleft.style.display = 'block';
+        profileserviceBGcenter.style.display = 'block';
+        profile.forEach(el => {
+            el.style.display = 'block';
+        });
+        service.forEach(el => {
+            el.style.display = 'block';
+        });
+        
+       root.style.setProperty('--profileservice-offset',' 10000px');
+
+       root.style.setProperty('--crescitcloud-offset',' 2200px');
+
+    });
+
+    btn.addEventListener('mouseleave', () => {
+
+    });
 
     function triggerAnimation() {
     
@@ -358,7 +328,7 @@
     window.onload = function() {
         setTimeout(() => {
             triggerAnimation();
-    }, 500);
+    }, 1000);
     };
 
   });
