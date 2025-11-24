@@ -95,12 +95,7 @@
         height: auto;
     }
 
-    .q2qtechnologies{
-        position: static;
-        z-index: 10;
-    }
-
-    .q2qtechnologies, .logo-btns svg {
+    .logo-btns svg {
         max-width: 1120px;
         width: 100%;
         height: 35px;
@@ -229,7 +224,7 @@
 
 
 <a href="https://www.q2qtechnologies.com/" target="_blank">
-<div class="q2qtechnologies">
+<div class="q2qtechnologies logo-btns">
 <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="6000 0 5410 550" fill="none">
     <!-- background-svg -->
 <path class="bg-path1 q2q-bg-left" d="M1424 0.999657L1309 0.999895C1299 1.49931 1260.01 -4.85465 1228.94 49.628C1197.87 104.111 992.445 450.03 982.088 467.328C971.732 484.625 955.333 527 996.761 527H1424V0.999657Z" fill="#660361"/>
@@ -301,6 +296,8 @@
     const vertexBGcenter = document.querySelector('.vertex-bg-center');
     const vertex = document.querySelectorAll('.vertex');
     const labs = document.querySelectorAll('.labs');
+
+    
 
     btn.addEventListener('mouseenter', () => {
 
