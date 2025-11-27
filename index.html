@@ -321,6 +321,8 @@
 </div>
 
 </div>
+
+<button id="size">sizing the buttons</button>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // --- ELEMENT SELECTION ---
@@ -364,6 +366,57 @@
 
     const fadeinText = document.querySelectorAll('.fadeinText');
 
+    // document.getElementById('size').addEventListener('click', function(){
+
+    // root.style.setProperty('--shared-anchor-x','320px');
+    //     q2qbgleft.style.transform = 'scaleX(1) translateX(310px)';
+    //     q2qbgcenter.style.transform = 'scaleX(1) translateX(310px)';
+      
+    //   q2q.forEach(el => {
+    //     el.style.transition = 'fill 1s ease-in-out';
+    //     el.style.fill = '#660361';
+    //   });
+
+    //   technologies.forEach(el => el.classList.add('show'));
+
+
+    //     showHidden();
+
+    //     slider(serviceSlider);
+    //     showGroup(profile);
+    //     showGroup(service);
+
+    //     root.style.setProperty('--profileservice-offset', '2350px');
+    //     root.style.setProperty('--profileservice-offset', '5510px');
+    //     root.style.setProperty('--profileservice-offset', '8275px');
+    //     root.style.setProperty('--profileservice-offset', '11190px');
+
+    //     // // STAGE 2: Crescit Cloud
+    //     slider(cloudSlider);
+    //     showGroup(cloud);
+    //     showGroup(crescit);
+
+    //     root.style.setProperty('--crescitcloud-offset', '2220px');
+    //     root.style.setProperty('--crescitcloud-offset', '4980px');
+    //     root.style.setProperty('--crescitcloud-offset', '7900px');
+
+    //     // // // STAGE 3: Stage Sync
+    //     slider(syncSlider);
+    //     showGroup(sync);
+    //     showGroup(stage);
+
+    //     root.style.setProperty('--stagesync-offset', '2090px');
+    //     root.style.setProperty('--stagesync-offset', '5020px');
+        
+
+    //     // // STAGE 4: Vertex Labs
+    //     slider(labsSlider);
+    //     showGroup(labs);
+    //     showGroup(vertex);
+
+    //     root.style.setProperty('--vertex-offset', '1950px');
+
+    // });
 
     let masterTimerList = [];
 
@@ -392,90 +445,90 @@
         el.classList.remove('active');
     }
 
-    btn.addEventListener('mouseenter', () => {
+    // btn.addEventListener('mouseenter', () => {
         
-        if (isIntroRunning) return;
+    //     if (isIntroRunning) return;
         
-        clearAllTimers();
+    //     clearAllTimers();
 
-        sliderspeed.forEach(el => {
-            el.style.transition = 'transform 0.3s ease-in-out';
-        });
+    //     sliderspeed.forEach(el => {
+    //         el.style.transition = 'transform 0.3s ease-in-out';
+    //     });
 
-        root.style.setProperty('--profileservice-offset', '11070px');
-        root.style.setProperty('--crescitcloud-offset', '7800px');
-        root.style.setProperty('--stagesync-offset', '4900px');
-        root.style.setProperty('--vertex-offset', '2000px');
+    //     root.style.setProperty('--profileservice-offset', '11070px');
+    //     root.style.setProperty('--crescitcloud-offset', '7800px');
+    //     root.style.setProperty('--stagesync-offset', '4900px');
+    //     root.style.setProperty('--vertex-offset', '2000px');
 
-        showHiddenAnimated();
+    //     showHiddenAnimated();
 
-        // safeTimeout(() => {
+    //     // safeTimeout(() => {
             
-        //     // Nested animations must also be "safe"
-        //     safeTimeout(() => { slider(serviceSlider); }, 300);
-        //     safeTimeout(() => { showGroup(service); }, 290);
-        //     safeTimeout(() => { showGroup(profile); }, 500);
+    //     //     // Nested animations must also be "safe"
+    //     //     safeTimeout(() => { slider(serviceSlider); }, 300);
+    //     //     safeTimeout(() => { showGroup(service); }, 290);
+    //     //     safeTimeout(() => { showGroup(profile); }, 500);
 
-        //     // Movement Steps
-        //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '2370px'), 0);
-        //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '5570px'), 1000);
-        //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '8070px'), 2000);
-        //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '11070px'), 3000);
+    //     //     // Movement Steps
+    //     //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '2370px'), 0);
+    //     //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '5570px'), 1000);
+    //     //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '8070px'), 2000);
+    //     //     safeTimeout(() => root.style.setProperty('--profileservice-offset', '11070px'), 3000);
 
-        // }, 0);
+    //     // }, 0);
 
-        // // STAGE 2: Crescit Cloud
-        // safeTimeout(() => {
-        //     safeTimeout(() => { slider(cloudSlider); }, 300);
-        //     safeTimeout(() => { showGroup(cloud); }, 290);
-        //     safeTimeout(() => { showGroup(crescit); }, 500);
+    //     // // STAGE 2: Crescit Cloud
+    //     // safeTimeout(() => {
+    //     //     safeTimeout(() => { slider(cloudSlider); }, 300);
+    //     //     safeTimeout(() => { showGroup(cloud); }, 290);
+    //     //     safeTimeout(() => { showGroup(crescit); }, 500);
 
-        //     safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '2300px'), 0);
-        //     safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '4800px'), 1000);
-        //     safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '7800px'), 2000);
-        // }, 1000);
+    //     //     safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '2300px'), 0);
+    //     //     safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '4800px'), 1000);
+    //     //     safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '7800px'), 2000);
+    //     // }, 1000);
 
-        // // STAGE 3: Stage Sync
-        // safeTimeout(() => {
-        //     safeTimeout(() => { slider(syncSlider); }, 300);
-        //     safeTimeout(() => { showGroup(sync); }, 290);
-        //     safeTimeout(() => { showGroup(stage); }, 500);
+    //     // // STAGE 3: Stage Sync
+    //     // safeTimeout(() => {
+    //     //     safeTimeout(() => { slider(syncSlider); }, 300);
+    //     //     safeTimeout(() => { showGroup(sync); }, 290);
+    //     //     safeTimeout(() => { showGroup(stage); }, 500);
 
-        //     safeTimeout(() => root.style.setProperty('--stagesync-offset', '2000px'), 0);
-        //     safeTimeout(() => root.style.setProperty('--stagesync-offset', '4900px'), 1000);
-        // }, 2000);
+    //     //     safeTimeout(() => root.style.setProperty('--stagesync-offset', '2000px'), 0);
+    //     //     safeTimeout(() => root.style.setProperty('--stagesync-offset', '4900px'), 1000);
+    //     // }, 2000);
 
-        // // STAGE 4: Vertex Labs
-        // safeTimeout(() => {
-        //     safeTimeout(() => { slider(labsSlider); }, 300);
-        //     safeTimeout(() => { showGroup(labs); }, 290);
-        //     safeTimeout(() => { showGroup(vertex); }, 500);
+    //     // // STAGE 4: Vertex Labs
+    //     // safeTimeout(() => {
+    //     //     safeTimeout(() => { slider(labsSlider); }, 300);
+    //     //     safeTimeout(() => { showGroup(labs); }, 290);
+    //     //     safeTimeout(() => { showGroup(vertex); }, 500);
 
-        //     root.style.setProperty('--vertex-offset', '2000px');
-        // }, 3000);
-    });
+    //     //     root.style.setProperty('--vertex-offset', '2000px');
+    //     // }, 3000);
+    // });
 
     // --- MOUSE LEAVE ---
-    btn.addEventListener('mouseleave', () => {
+    // btn.addEventListener('mouseleave', () => {
 
-        if (isIntroRunning) return;
+    //     if (isIntroRunning) return;
 
-        fadeinText.forEach(el => {
-            el.style.transition = "opacity .1s ease-in-out, visibility .1s ease-in-out";
-        })
+    //     fadeinText.forEach(el => {
+    //         el.style.transition = "opacity .1s ease-in-out, visibility .1s ease-in-out";
+    //     })
 
-        // 1. KILL ALL ANIMATIONS INSTANTLY
-        clearAllTimers();
+    //     // 1. KILL ALL ANIMATIONS INSTANTLY
+    //     clearAllTimers();
 
-        // 2. Hide everything
-        hideAllElements();
+    //     // 2. Hide everything
+    //     hideAllElements();
 
-        // 3. Reset Positions
-        root.style.setProperty('--profileservice-offset', '600px'); 
-        root.style.setProperty('--crescitcloud-offset', '405px');
-        root.style.setProperty('--stagesync-offset', '505px');
-        root.style.setProperty('--vertex-offset', '140px');
-    });
+    //     // 3. Reset Positions
+    //     root.style.setProperty('--profileservice-offset', '600px'); 
+    //     root.style.setProperty('--crescitcloud-offset', '405px');
+    //     root.style.setProperty('--stagesync-offset', '505px');
+    //     root.style.setProperty('--vertex-offset', '140px');
+    // });
 
 
     function hideAllElements() {
@@ -546,10 +599,10 @@
             safeTimeout(() => { showGroup(profile); }, 500);
 
             // Movement Steps
-            safeTimeout(() => root.style.setProperty('--profileservice-offset', '2370px'), 0);
-            safeTimeout(() => root.style.setProperty('--profileservice-offset', '5570px'), 1000);
-            safeTimeout(() => root.style.setProperty('--profileservice-offset', '8070px'), 2000);
-            safeTimeout(() => root.style.setProperty('--profileservice-offset', '11070px'), 3000);
+            safeTimeout(() => root.style.setProperty('--profileservice-offset', '2350px'), 0);
+            safeTimeout(() => root.style.setProperty('--profileservice-offset', '5510px'), 1000);
+            safeTimeout(() => root.style.setProperty('--profileservice-offset', '8275px'), 2000);
+            safeTimeout(() => root.style.setProperty('--profileservice-offset', '11190px'), 3000);
 
         }, 0);
 
@@ -559,9 +612,9 @@
             safeTimeout(() => { showGroup(cloud); }, 50);
             safeTimeout(() => { showGroup(crescit); }, 500);
 
-            safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '2300px'), 0);
-            safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '4800px'), 1000);
-            safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '7800px'), 2000);
+            safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '2220px'), 0);
+            safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '4980px'), 1000);
+            safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '7900px'), 2000);
         }, 1000);
 
         // STAGE 3: Stage Sync
@@ -570,8 +623,8 @@
             safeTimeout(() => { showGroup(sync); }, 50);
             safeTimeout(() => { showGroup(stage); }, 500);
 
-            safeTimeout(() => root.style.setProperty('--stagesync-offset', '2000px'), 0);
-            safeTimeout(() => root.style.setProperty('--stagesync-offset', '4900px'), 1000);
+            safeTimeout(() => root.style.setProperty('--stagesync-offset', '2090px'), 0);
+            safeTimeout(() => root.style.setProperty('--stagesync-offset', '5020px'), 1000);
         }, 2000);
 
         // STAGE 4: Vertex Labs
@@ -580,7 +633,7 @@
             safeTimeout(() => { showGroup(labs); }, 50);
             safeTimeout(() => { showGroup(vertex); }, 500);
 
-            root.style.setProperty('--vertex-offset', '2000px');
+            root.style.setProperty('--vertex-offset', '1950px');
         }, 3000);
 
       }, 1000);
@@ -646,8 +699,8 @@
 
         // STAGE 3: Stage Sync
         safeTimeout(() => {
-            safeTimeout(() => root.style.setProperty('--stagesync-offset', '505px'), 1000);
-            safeTimeout(() => root.style.setProperty('--stagesync-offset', '2000px'), 0);
+            safeTimeout(() => root.style.setProperty('--stagesync-offset', '565px'), 1000);
+            safeTimeout(() => root.style.setProperty('--stagesync-offset', '2150px'), 0);
         }, 1000);
 
         safeTimeout(() => {
@@ -685,7 +738,7 @@
 
     window.onload = function() {
         setTimeout(() => { triggerAnimation(); }, 1000);
-        setTimeout(() => { triggerLogoAnimation(); }, 1000);
+        // setTimeout(() => { triggerLogoAnimation(); }, 1000);
 
         setTimeout(() => {
             isIntroRunning = false; 
