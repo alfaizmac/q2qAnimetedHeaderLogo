@@ -160,13 +160,17 @@
         .logo-btns svg {
             max-width: 1120px;
             width: 100%;
-            height: 32px;
+            height: 37px;
+        }
+
+        .smaller-logo svg{
+            height: 35px;
         }
     }
     </style>
 
 <div class="hover-trigger-button">
-<div class="profileservice logo-btns">
+<div class="profileservice logo-btns small-logo">
     <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="5800 0 5410 550" fill="none">
         <a href="https://www.q2qtechnologies.com/profile-service/" target="_blank">
         <g class="sliderspeed bg-path profileservice-anchor-group">
@@ -614,6 +618,16 @@
 
             safeTimeout(() => profileservicesvg.style.height = '35px', 1000);
 
+            safeTimeout(() => {
+            if (window.innerWidth <= 1440) { 
+
+                profileservicesvg.style.height = '32px';
+            }
+            else{
+                profileservicesvg.style.height = '35px';
+            }
+            }, 1000);
+
         }, 0);
 
         // STAGE 2: Crescit Cloud
@@ -626,7 +640,15 @@
             safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '4980px'), 1000);
             safeTimeout(() => root.style.setProperty('--crescitcloud-offset', '8050px'), 2000);
 
-            safeTimeout(() => crescitcloudsvg.style.height = '35px', 1000);
+            safeTimeout(() => {
+            if (window.innerWidth <= 1440) { 
+
+                crescitcloudsvg.style.height = '32px';
+            }
+            else{
+                crescitcloudsvg.style.height = '35px';
+            }
+            }, 1000);
 
         }, 1000);
 
@@ -639,7 +661,15 @@
             safeTimeout(() => root.style.setProperty('--stagesync-offset', '2090px'), 0);
             safeTimeout(() => root.style.setProperty('--stagesync-offset', '5170px'), 1000);
 
-            safeTimeout(() => stagesyncsvg.style.height = '35px', 1000);
+            safeTimeout(() => {
+            if (window.innerWidth <= 1440) { 
+
+                stagesyncsvg.style.height = '32px';
+            }
+            else{
+                stagesyncsvg.style.height = '35px';
+            }
+            }, 1000);
 
         }, 2000);
 
@@ -651,7 +681,15 @@
 
             root.style.setProperty('--vertex-offset', '2100px');
 
-            safeTimeout(() => vertexlabssvg.style.height = '35px', 100);
+            safeTimeout(() => {
+            if (window.innerWidth <= 1440) { 
+
+                vertexlabssvg.style.height = '32px';
+            }
+            else{
+                vertexlabssvg.style.height = '35px';
+            }
+            }, 1000);
 
         }, 3000);
 
